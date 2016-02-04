@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: Blackbird Starter Plugin
- * Plugin URI: https://github.com/Herm71/blackbird-starter
+ * Plugin URI: https://github.com/Herm71/blackbird-starter-plugin
  * Description: Starter Plugin for development purposes. Theme independent.
  * Version: 0.0.1
  * Author: Blackbird Consulting
  * Author URI: http://www.blackbirdconsult.com/
  * License: GPL2
  * Text Domain: blackbird-starter
- * GitHub Plugin URI: https://github.com/Herm71/blackbird-starter
+ * GitHub Plugin URI: https://github.com/Herm71/blackbird-starter-plugin
  * GitHub Branch: master
  * 
  * 
