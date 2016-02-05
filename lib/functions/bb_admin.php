@@ -7,7 +7,6 @@
  * of Otto's tutorial and many references to the WordPress Codex
  * http://ottopress.com/2009/wordpress-settings-api-tutorial/
  * 
- * Verison: 0.0.0
  * Author: Blackbird Consulting
  * Author URI: http://www.blackbirdconsult.com
  * 
@@ -35,8 +34,9 @@
  */
 
 add_action('admin_menu', 'plugin_admin_add_page');
+
 function plugin_admin_add_page() {
-add_options_page('Blackbird Custom Plugin Page', 'Blackbird Custom Plugin Menu', 'manage_options', 'bb-starter-plugin', 'bb_starter_plugin_options_page');
+    add_options_page('Blackbird Custom Plugin Page', 'Blackbird Custom Plugin Menu', 'manage_options', 'bb-starter-plugin', 'bb_starter_plugin_options_page');
 }
 
 /*
@@ -48,22 +48,23 @@ add_options_page('Blackbird Custom Plugin Page', 'Blackbird Custom Plugin Menu',
  * do_settings_sections ($page);
  * 
  */
+
 function bb_starter_plugin_options_page() {
-?>
-<div>
-<h2>Blackbird Starter Plugin Options Page</h2>
-Options relating to the Custom Plugin.
-<form action="options.php" method="post">
-<?php settings_fields('bb_starter_plugin_options_group'); ?>
-<?php do_settings_sections('bb_starter_plugin_options_page'); ?>
- 
-<input name="Submit" class="button-primary" type="submit" value="<?php esc_attr_e('Save Changes'); ?>" />
-</form></div>
- 
-<?php
+    ?>
+    <div>
+        <h2>Blackbird Starter Plugin Options Page</h2>
+        Options relating to the Custom Plugin.
+        <form action="options.php" method="post">
+    <?php settings_fields('bb_starter_plugin_options_group'); ?>
+    <?php do_settings_sections('bb_starter_plugin_options_page'); ?>
+
+            <input name="Submit" class="button-primary" type="submit" value="<?php esc_attr_e('Save Changes'); ?>" />
+        </form></div>
+
+    <?php
 }
 
-/* 
+/*
  * Register and add the admin settings
  * 
  * register_setting( $option_group, $option_name, $sanitize_callback
@@ -80,21 +81,23 @@ Options relating to the Custom Plugin.
  */
 add_action('admin_init', 'plugin_admin_init');
 
-function plugin_admin_init(){
-register_setting( 'bb_starter_plugin_options_group', 'bb_starter_plugin_options', 'bb_starter_plugin_options_validate' );
-add_settings_section('bb_starter_plugin_main', 'Main Settings', 'bb_starter_plugin_section_text', 'bb_starter_plugin_options_page');
-add_settings_field('bb_starter_plugin_text_string', 'Blackbird Plugin Text Input', 'bb_starter_plugin_setting_string', 'bb_starter_plugin_options_page', 'bb_starter_plugin_main', '');
+function plugin_admin_init() {
+    register_setting('bb_starter_plugin_options_group', 'bb_starter_plugin_options', 'bb_starter_plugin_options_validate');
+    add_settings_section('bb_starter_plugin_main', 'Main Settings', 'bb_starter_plugin_section_text', 'bb_starter_plugin_options_page');
+    add_settings_field('bb_starter_plugin_text_string', 'Blackbird Plugin Text Input', 'bb_starter_plugin_setting_string', 'bb_starter_plugin_options_page', 'bb_starter_plugin_main', '');
 }
 
 /*
+ * 
  * Settings Sections
  * 
  * Note: Call back function should be the value you added 
  * for add_settings_section($callback)
  * 
  */
+
 function bb_starter_plugin_section_text() {
-echo '<p>Main description of this section here.</p>';
+    echo '<p>Main description of this section here.</p>';
 }
 
 /*
@@ -109,10 +112,11 @@ echo '<p>Main description of this section here.</p>';
  * 
  * 
  */
+
 function bb_starter_plugin_setting_string() {
-$options = get_option('bb_starter_plugin_options');
-print_r ($options['text_string']);
-echo "<input id='plugin_text_string' name='bb_starter_plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
+    $options = get_option('bb_starter_plugin_options');
+    print_r($options['text_string']);
+    echo "<input id='plugin_text_string' name='bb_starter_plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
 }
 
 /*
@@ -122,12 +126,12 @@ echo "<input id='plugin_text_string' name='bb_starter_plugin_options[text_string
  * 
  * $option_name is the second argument in register_settings($option_name);
  */
-function bb_starter_plugin_options_validate($input) {
-$options = get_option('bb_starter_plugin_options');
-$options['text_string'] = trim($input['text_string']);
-if(!preg_match('/^[a-z0-9]{32}$/i', $options['text_string'])) {
-$options['text_string'] = '';
-}
-return $options;
-}
 
+function bb_starter_plugin_options_validate($input) {
+    $options = get_option('bb_starter_plugin_options');
+    $options['text_string'] = trim($input['text_string']);
+    if (!preg_match('/^[a-z0-9]{32}$/i', $options['text_string'])) {
+        $options['text_string'] = '';
+    }
+    return $options;
+}

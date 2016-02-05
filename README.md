@@ -3,11 +3,13 @@
 # Synopsis
 
 This is a starter-plugin, a basis to build on. This plugin was developed using the [WordPress Settings API Tutorial](http://ottopress.com/2009/wordpress-settings-api-tutorial/). 
-The plugin creates a new "Settings" admin page, and registers a few input fields. You can copy and paste to add more options based on the examples given. 
+The plugin creates a new "Settings" admin page, and registers a few input fields. You can copy and paste to add more options based on the examples given.
+
+Because this was developed as a learning tool, it is heavily commented. The bulk of the code resides in `blackbird-starter-plugin/lib/functions/bb_admin.php`. I have referenced the API calls in the heading comments of each section of the code. This is an evolving process, but I hope to have given enough direction to get you started.
 
 # Motivation
 
-I developed this for my own purposes. I came across the **Otto Tutorial** in a web search. I wanted to get to know the code so I decided to create my own version of it. Something I can clone into a project and craft to my liking.
+I developed this for my own purposes. I came across the [**Otto Tutorial**](http://ottopress.com/2009/wordpress-settings-api-tutorial/) in a web search. I wanted to get to know the code so I decided to create my own version of it. Something I can clone into a project and craft to my liking. Also, to familiarize myself with the **WordPress Settings API**.
 
 # Installation
 
@@ -22,9 +24,11 @@ I developed this for my own purposes. I came across the **Otto Tutorial** in a w
 
 # Contributors
 
-This plugin was created entirely by [Jason Chafin](http://www.jasonchafin.com), founder and president of [Blackbird Consulting](http://www.blackbirdconsult.com). 
+Again, I give credit to [Otto on WordPress](http://ottopress.com) for introducing me to the process and the code structure. Otherwise all code was written by me, [Jason Chafin](http://www.jasonchafin.com), founder and president of [Blackbird Consulting](http://www.blackbirdconsult.com). 
 
 **Twitter:**  @BlackbirdConsul
+
+**GitHub:** `/Herm71`
 
 # License
 
