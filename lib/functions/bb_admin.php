@@ -115,7 +115,8 @@ function bb_starter_plugin_section_text() {
 
 function bb_starter_plugin_setting_string() {
     $options = get_option('bb_starter_plugin_options');
-    print_r($options['text_string']);
+    print_r($options);
+    //print_r($options['text_string']);
     echo "<input id='plugin_text_string' name='bb_starter_plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
 }
 

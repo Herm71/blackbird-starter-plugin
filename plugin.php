@@ -32,9 +32,9 @@ include_once( BB_STARTER_DIR . '/lib/functions/bb_admin.php' );
 
 //Add link to Plugin Settings Page
 function bbstarter_plugin_add_settings_link( $links ) {
-    $settings_link = '<a href="options-general.php?page=bbadsense_plugin">' . __( 'Settings' ) . '</a>';
+    $settings_link = '<a href="options-general.php?page=bb-starter-plugin">' . __( 'Settings' ) . '</a>';
     array_push( $links, $settings_link );
   	return $links;
 }
 $plugin = plugin_basename( __FILE__ );
-//add_filter( "plugin_action_links_$plugin", 'bbstarter_plugin_add_settings_link' );
+add_filter( "plugin_action_links_$plugin", 'bbstarter_plugin_add_settings_link' );
