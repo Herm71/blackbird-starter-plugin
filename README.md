@@ -9,7 +9,7 @@ Because this was developed as a learning tool, it is heavily commented. The bulk
 
 # Motivation
 
-I developed this for my own purposes. I came across the [**Otto Tutorial**](http://ottopress.com/2009/wordpress-settings-api-tutorial/) in a web search. I wanted to get to know the code so I decided to create my own version of it. Something I can clone into a project and craft to my liking. Also, to familiarize myself with the **WordPress Settings API**.
+I developed this for my own purposes. I came across the [**Getting Started with WordPress Plugin Development: The Ultimate Guide**](https://premium.wpmudev.org/blog/wordpress-plugin-development-guide/) in a web search. I wanted to get to know the code so I decided to create my own version of it. Something I can clone into a project and craft to my liking. Also, to familiarize myself with the **WordPress Settings API**.
 
 # Installation
 
@@ -37,6 +37,11 @@ Again, I give credit to [Otto on WordPress](http://ottopress.com) for introducin
 # Change Log
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
+
+## 0.1.0 - 2016-02-044
+### Changed
+- Rewrote plugin structure
+- Added basic checkbox form to Options page
 
 ## 0.0.1 - 2016-02-044
 ### Added

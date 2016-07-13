@@ -3,7 +3,7 @@
  * Plugin Name: Blackbird Starter Plugin
  * Plugin URI: https://github.com/Herm71/blackbird-starter-plugin
  * Description: Starter Plugin for development purposes. Theme independent.
- * Version: 0.0.1
+ * Version: 0.1.0
  * Author: Blackbird Consulting
  * Author URI: http://www.blackbirdconsult.com/
  * License: GPL2
@@ -26,8 +26,10 @@
 define( 'BB_STARTER_DIR', dirname( __FILE__ ) );
 
 // Plugin Settings
-include_once( BB_STARTER_DIR . '/lib/functions/bb_admin.php' );
+include_once( BB_STARTER_DIR . '/functions/admin.php' );
 
+// Plugin Functions
+include_once( BB_STARTER_DIR . '/functions/functions.php' );
 
 
 //Add link to Plugin Settings Page
