@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Blackbird Starter Plugin
- * Plugin URI: https://github.com/Herm71/blackbird-starter-plugin
+ * Plugin Name: Blackbird Essay Hell 2
+ * Plugin URI: https://github.com/Herm71/blackbird-essayhell-plugin
  * Description: Starter Plugin for development purposes. Theme independent.
  * Version: 0.1.0
  * Author: Blackbird Consulting
  * Author URI: http://www.blackbirdconsult.com/
  * License: GPL2
- * Text Domain: blackbird-starter
- * GitHub Plugin URI: https://github.com/Herm71/blackbird-starter-plugin
+ * Text Domain: blackbird-essayhell
+ * GitHub Plugin URI: https://github.com/Herm71/blackbird-essayhell-plugin
  * GitHub Branch: master
  * 
  * 
@@ -23,20 +23,20 @@
  */
 
 // Plugin Directory 
-define( 'BB_STARTER_DIR', dirname( __FILE__ ) );
+define( 'BB_ESSAYHELL_DIR', dirname( __FILE__ ) );
 
 // Plugin Settings
-include_once( BB_STARTER_DIR . '/functions/admin.php' );
+include_once( BB_ESSAYHELL_DIR . '/functions/admin.php' );
 
 // Plugin Functions
-include_once( BB_STARTER_DIR . '/functions/functions.php' );
+include_once( BB_ESSAYHELL_DIR . '/functions/functions.php' );
 
 
 //Add link to Plugin Settings Page
-function bbstarter_plugin_add_settings_link( $links ) {
-    $settings_link = '<a href="options-general.php?page=bb-starter-plugin">' . __( 'Settings' ) . '</a>';
+function bbessayhell_plugin_add_settings_link( $links ) {
+    $settings_link = '<a href="options-general.php?page=bb-essayhell-plugin">' . __( 'Settings' ) . '</a>';
     array_push( $links, $settings_link );
   	return $links;
 }
 $plugin = plugin_basename( __FILE__ );
-add_filter( "plugin_action_links_$plugin", 'bbstarter_plugin_add_settings_link' );
+add_filter( "plugin_action_links_$plugin", 'bbessayhell_plugin_add_settings_link' );
